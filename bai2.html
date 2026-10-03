@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Bài 2 - Quá trình lên men sữa chua</title>
+
+    <!-- MathJax cho các công thức toán học -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.7;
+
+            color: #333333;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+            background-color: #f9f9f9;
+        }
+
+
+        .container {
+
+            background-color: #ffffff;
+
+            padding: 30px;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        h1,
+        h2,
+        h3 {
+
+            color: #2c3e50;
+        }
+
+
+        .question-title {
+
+            font-size: 1.1em;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+
+        .section-title {
+
+            font-weight: bold;
+
+            font-size: 1.1em;
+
+            margin-top: 25px;
+
+            margin-bottom: 10px;
+
+            color: #2c3e50;
+        }
+
+
+        .content-block {
+
+            margin-bottom: 20px;
+        }
+
+
+        p {
+
+            margin-top: 8px;
+
+            margin-bottom: 12px;
+        }
+
+
+        ul {
+
+            margin-top: 5px;
+
+            padding-left: 25px;
+        }
+
+
+        li {
+
+            margin-bottom: 12px;
+        }
+
+
+        .image-container {
+
+            text-align: center;
+
+            margin: 25px 0;
+        }
+
+
+        .image-container img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            border: 1px solid #ddd;
+
+            border-radius: 4px;
+        }
+
+
+        .image-caption {
+
+            font-style: italic;
+
+            font-size: 0.9em;
+
+            color: #555555;
+
+            margin-top: 8px;
+
+            line-height: 1.5;
+        }
+
+
+        .formula-box {
+
+            background-color: #f4f6f7;
+
+            padding: 15px 20px;
+
+            border-left:
+                4px solid #3498db;
+
+            margin: 15px 0;
+
+            border-radius: 4px;
+
+            overflow-x: auto;
+        }
+
+
+        .formula {
+
+            font-size: 18px;
+
+            text-align: center;
+
+            margin: 15px 0;
+
+            white-space: nowrap;
+        }
+
+
+        .reference-list {
+
+            font-size: 0.95em;
+
+            padding-left: 25px;
+        }
+
+
+        .reference-list li {
+
+            margin-bottom: 10px;
+
+            word-break: normal;
+        }
+
+
+        .reference-list a {
+
+            color: #2980b9;
+
+            word-break: break-word;
+        }
+
+
+        hr {
+
+            border: none;
+
+            border-top:
+                1px solid #dddddd;
+
+            margin: 30px 0;
+        }
+
+
+        /* Công thức hóa học */
+
+        sub {
+
+            font-size: 0.75em;
+
+            vertical-align: sub;
+        }
+
+
+        sup {
+
+            font-size: 0.75em;
+
+            vertical-align: super;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                padding: 10px;
+
+                font-size: 15px;
+            }
+
+            .container {
+
+                padding: 20px 16px;
+            }
+
+            .question-title {
+
+                font-size: 1em;
+            }
+
+            .section-title {
+
+                font-size: 1em;
+            }
+
+            .formula {
+
+                font-size: 15px;
+            }
+
+            .formula-box {
+
+                padding: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================
+         CÂU HỎI
+    ========================== -->
+
+    <div class="question-title">
+
+        Câu 5. Trong quá trình làm sữa chua,
+        sữa từ trạng thái lỏng chuyển thành sản phẩm
+        có vị chua và cấu trúc đặc hơn.
+        Hãy sử dụng kiến thức Khoa học Tự nhiên
+        để trả lời các câu hỏi:
+
+    </div>
+
+
+    <div class="content-block">
+
+        <p>
+            a) Xác định vai trò của vi khuẩn lactic
+            và vẽ sơ đồ minh họa quá trình chuyển hóa
+            đường trong sữa thành acid lactic.
+        </p>
+
+        <p>
+            b) Viết phương trình tổng quát thích hợp
+            biểu diễn quá trình lên men lactic.
+        </p>
+
+        <p>
+            c) Giải thích vì sao sự giảm pH làm thay đổi
+            trạng thái của protein sữa.
+        </p>
+
+        <p>
+            d) Phân tích ảnh hưởng của nhiệt độ và
+            thời gian ủ đến hoạt động của vi khuẩn
+            và chất lượng sản phẩm.
+        </p>
+
+    </div>
+
+
+    <hr>
+
+
+    <!-- =========================
+         BÀI LÀM
+    ========================== -->
+
+    <div class="section-title">
+        Bài làm:
+    </div>
+
+
+    <!-- =========================
+         PHẦN A
+    ========================== -->
+
+    <div class="section-title">
+
+        a) Vai trò của vi khuẩn lactic (LAB)
+        trong quá trình lên men sữa:
+
+    </div>
+
+
+    <ul>
+
+        <li>
+
+            <strong>
+                Tính chất bảo quản của vi khuẩn lactic:
+            </strong>
+
+            Axit hữu cơ là sản phẩm cuối cùng
+            của quá trình chuyển hóa carbohydrate
+            do vi khuẩn axit lactic (LAB) tạo ra.
+
+            Các loài LAB lên men đồng hình
+            (homofermentative) chuyển hóa đường
+            trong sữa chủ yếu thành axit lactic,
+            trong khi các loài lên men dị hình
+            (heterofermentative) chuyển hóa lactose
+            thành axit lactic, axit axetic, ethanol
+            và CO<sub>2</sub>.
+
+            Việc sản xuất acid hữu cơ nhanh chóng
+            giúp làm giảm pH của sản phẩm, qua đó
+            ức chế sự phát triển của các vi khuẩn
+            gây hư hỏng và vi khuẩn gây bệnh.
+
+            Các chủng vi khuẩn axit lactic (LAB)
+            phân lập từ sữa tươi của bò, dê và cừu
+            được phát hiện có hoạt tính kháng lại
+            4 loài nấm gây hư hỏng thực phẩm:
+            <em>Penicillium expansum</em>,
+            <em>Mucor plumbeus</em>,
+            <em>Kluyveromyces lactis</em> và
+            <em>Pichia anomala</em>.
+
+            Vi khuẩn lactic tiết ra các chất kháng khuẩn
+            bản chất peptide gọi là bacteriocin
+            (nisin, bacteriocin,...) là chất bảo quản
+            sinh học.
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Sự hình thành hương vị:
+            </strong>
+
+            Sự hình thành hương vị và các đặc tính
+            hương vị đặc trưng của từng loại phô mai
+            được phát triển trong quá trình chín nhờ
+            hoạt động của cả vi khuẩn lactic khởi động
+            (starter LAB) và vi khuẩn lactic không khởi động
+            (non-starter LAB).
+
+            Các bước hình thành hương vị phô mai do LAB
+            thực hiện bao gồm: chuyển hóa lactose,
+            lactate và citrate; phân giải lipid
+            (lipolysis) giải phóng các axit béo tự do;
+            và phân giải protein (proteolysis) –
+            quá trình phân hủy casein theo sau là
+            sự dị hóa axit amin.
+
+            Hương vị của sữa chua được tạo nên bởi
+            nhiều hợp chất khác nhau, trong đó axit lactic
+            đóng vai trò chủ đạo, cùng với các hợp chất
+            tạo mùi thơm khác (Acetaldehyde, diacetyl,
+            propanoic acid,...).
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Cải thiện cấu trúc thực phẩm:
+            </strong>
+
+            Sữa chua là một sản phẩm sữa lên men đặc biệt,
+            có kết cấu mềm và đặc hơn so với nguyên liệu
+            ban đầu là sữa.
+
+            Vị chua nhẹ cùng hương vị tươi mát, dễ chịu
+            đã tạo nên những đặc tính nổi bật của sữa chua
+            như một sản phẩm sữa lên men độc đáo.
+
+            Kết cấu của sữa chua được hình thành nhờ
+            sự sản sinh exopolysaccharide (EPS) đóng vai trò
+            là chất tạo độ nhớt – bởi vi khuẩn axit lactic
+            (LAB).
+
+            Ngoài ra, kết cấu này còn được củng cố bởi
+            quá trình đông tụ, xảy ra do sự trung hòa
+            các điện tích âm trên bề mặt protein sữa –
+            một hệ quả khác từ axit do LAB tạo ra.
+
+            Việc sản xuất EPS phụ thuộc vào chủng
+            vi khuẩn LAB cụ thể.
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Các đặc tính có lợi cho sức khỏe
+                của vi khuẩn lactic:
+            </strong>
+
+            Các peptide hoạt tính sinh học được tạo ra
+            từ quá trình thủy phân casein trong sữa nhờ
+            vi khuẩn <em>L. helveticus</em> đã được nghiên cứu
+            và chứng minh có tác dụng hạ huyết áp,
+            điều hòa miễn dịch, chống ung thư cũng như
+            khả năng liên kết với canxi.
+
+            <em>L. helveticus</em> được biết đến là một trong
+            những loài vi khuẩn axit lactic (LAB) sở hữu
+            hệ thống phân giải protein hiệu quả.
+
+            Các sản phẩm sữa lên men được ghi nhận là
+            có tác động tích cực đến sức khỏe con người
+            thông qua nhiều cơ chế khác nhau.
+
+            LAB đứng đầu danh sách các vi sinh vật được
+            sử dụng trong chế phẩm probiotic.
+
+            Sữa chua và các chủng LAB cụ thể đã được
+            chứng minh là có tác động tích cực hoặc
+            đầy hứa hẹn đối với sức khỏe; nổi bật nhất
+            là hiệu quả đối với tình trạng kém hấp thu
+            lactose – vấn đề bắt nguồn từ yếu tố di truyền
+            hoặc sự thiếu hụt enzyme lactase.
+
+            Nếu lactose đi xuống đại tràng, nó sẽ nhanh
+            chóng bị hệ vi sinh vật tại đây lên men,
+            dẫn đến sự hình thành khí.
+
+            Chứng bất dung nạp lactose là tình trạng
+            người bệnh gặp các triệu chứng tiêu hóa như
+            đầy hơi, tiêu chảy, chướng bụng và nôn mửa
+            sau khi tiêu thụ sữa hoặc các sản phẩm từ sữa.
+
+            Tuy nhiên, những người bị kém hấp thu lactose
+            thường vẫn dung nạp tốt các sản phẩm sữa lên men,
+            đặc biệt là sữa chua, mặc dù chúng vẫn chứa lactose.
+
+            Lợi ích này đối với quá trình tiêu hóa ở người
+            đã được khẳng định rõ ràng và có thể được giải thích
+            bởi sự hiện diện của enzyme
+            &beta;-galactosidase
+            (có chức năng tương tự lactase) do các vi khuẩn
+            <em>S. thermophilus</em> và
+            <em>L. bulgaricus</em> trong sữa chua sản sinh ra.
+
+        </li>
+
+    </ul>
+
+
+    <!-- =========================
+         SƠ ĐỒ
+    ========================== -->
+
+    <div class="section-title">
+
+        Sơ đồ minh họa quá trình chuyển hóa đường
+        trong sữa thành acid lactic:
+
+    </div>
+
+
+    <div class="image-container">
+
+        <img
+            src="https://via.placeholder.com/700x900.png?text=So+Do+Len+Men+Lactic"
+            alt="Các con đường lên men chính của glucose"
+        >
+
+        <div class="image-caption">
+
+            <strong>Hình 1.</strong>
+            Các con đường lên men chính của glucose.
+
+            <br>
+
+            <em>Ghi chú:</em>
+            Hiệu chỉnh từ "Major fermentation pathways
+            of glucose," trong
+            <em>Lactic Acid Bacteria</em>,
+            bởi Trần Đình Kiệt, chèn thêm công thức phân tử.
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PHẦN B
+    ========================== -->
+
+    <div class="section-title">
+
+        b) Phương trình tổng quát thích hợp
+        biểu diễn quá trình lên men lactic:
+
+    </div>
+
+
+    <div class="formula-box">
+
+        <p>
+            <strong>
+                - Lên men đồng hình:
+            </strong>
+        </p>
+
+        <div class="formula">
+
+            C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
+            (Glucose/Galactose)
+            &rarr;
+            2C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>
+            + 2ATP
+
+        </div>
+
+
+        <p>
+            <strong>
+                - Lên men dị hình:
+            </strong>
+        </p>
+
+        <div class="formula">
+
+            C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
+            (Glucose)
+            &rarr;
+            C<sub>3</sub>H<sub>6</sub>O<sub>3</sub>
+            +
+            C<sub>2</sub>H<sub>5</sub>OH
+            +
+            CO<sub>2</sub>
+            +
+            ATP
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PHẦN C
+    ========================== -->
+
+    <div class="section-title">
+
+        c) Giải thích vì sao sự giảm pH
+        làm thay đổi trạng thái của protein sữa:
+
+    </div>
+
+
+    <p>
+
+        Khi độ pH giảm xuống dưới 5,
+        các micelle casein (loại protein chính trong sữa)
+        sẽ mất cấu trúc bậc ba do sự proton hóa
+        các gốc axit amin của chúng.
+
+        Protein đã biến tính sẽ tái cấu trúc thông qua
+        tương tác với các phân tử kỵ nước khác;
+        chính sự tương tác giữa các phân tử casein này
+        tạo nên cấu trúc mang lại trạng thái bán rắn
+        đặc trưng cho sữa chua.
+
+    </p>
+
+
+    <!-- =========================
+         PHẦN D
+    ========================== -->
+
+    <div class="section-title">
+
+        d) Ảnh hưởng của nhiệt độ và thời gian ủ:
+
+    </div>
+
+
+    <p>
+        <strong>
+            Ảnh hưởng của nhiệt độ ủ:
+        </strong>
+    </p>
+
+
+    <ul>
+
+        <li>
+
+            <strong>
+                Đối với hoạt động của vi khuẩn:
+            </strong>
+
+            <ul>
+
+                <li>
+
+                    <em>Khoảng nhiệt độ tối ưu:</em>
+
+                    Mỗi nhóm vi khuẩn lactic có khoảng
+                    nhiệt độ sinh trưởng tối ưu riêng.
+
+                    Ví dụ: nhóm vi khuẩn ưa nhiệt như
+                    <em>Streptococcus thermophilus</em>
+                    (40–42&deg;C) và
+                    <em>Lactobacillus delbrueckii</em>
+                    subsp.
+                    <em>bulgaricus</em>
+                    (42–46&deg;C) được dùng trong sản xuất
+                    sữa chua;
+
+                    trong khi nhóm vi khuẩn ưa ấm như
+                    <em>Lactococcus lactis</em>
+                    (28–34&deg;C) hay
+                    <em>Leuconostoc</em>
+                    lại thích hợp cho buttermilk
+                    hoặc phô mai.
+
+                    Ở nhiệt độ tối ưu, vi khuẩn
+                    hô hấp/lên men mạnh nhất và sự phối hợp
+                    tương hỗ giữa các chủng
+                    (proto-cooperation) diễn ra đạt hiệu quả cao.
+
+                </li>
+
+
+                <li>
+
+                    <em>Nhiệt độ quá thấp:</em>
+
+                    Làm giảm hoạt tính của hệ enzyme
+                    chuyển hóa, kéo dài pha lag
+                    (pha thích ứng) và làm chậm tốc độ
+                    sinh acid lactic.
+
+                    Ở một số sản phẩm lên men phối hợp,
+                    nhiệt độ thấp có thể làm thay đổi
+                    sự ưu thế giữa các dòng vi khuẩn.
+
+                </li>
+
+
+                <li>
+
+                    <em>Nhiệt độ quá cao:</em>
+
+                    Khi vượt quá ngưỡng chịu nhiệt,
+                    vi khuẩn bị ức chế sinh trưởng,
+                    giảm khả năng tổng hợp enzym hoặc
+                    thậm chí bị tiêu diệt.
+
+                    Nhiệt độ quá cao cũng làm mất cân bằng
+                    tỷ lệ sinh trưởng giữa các chủng
+                    vi khuẩn phối hợp.
+
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Đối với chất lượng sản phẩm:
+            </strong>
+
+            <ul>
+
+                <li>
+
+                    <em>Nhiệt độ thấp hơn chuẩn:</em>
+
+                    Sữa lâu đông tụ, làm tăng nguy cơ
+                    phát triển của các vi sinh vật tạp nhiễm.
+
+                    Sản phẩm thường bị lỏng, kém chua
+                    và thiếu các hợp chất thơm đặc trưng.
+
+                </li>
+
+
+                <li>
+
+                    <em>Nhiệt độ cao hơn chuẩn:</em>
+
+                    Quá trình axit hóa diễn ra quá nhanh
+                    khiến mạng lưới gel casein hình thành
+                    không đều, dễ dẫn đến hiện tượng
+                    tách nước (tách huyết thanh sữa),
+                    khối đông bị co rút, sản phẩm có vị
+                    chua gắt hoặc xuất hiện mùi vị lạ.
+
+                </li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+
+    <p>
+
+        <strong>
+            Ảnh hưởng của thời gian ủ:
+        </strong>
+
+    </p>
+
+
+    <ul>
+
+        <li>
+
+            <strong>
+                Đối với hoạt động của vi khuẩn:
+            </strong>
+
+            <ul>
+
+                <li>
+
+                    <em>Thời gian ủ tối ưu:</em>
+
+                    Vi khuẩn trải qua pha nhân nhanh
+                    (pha mũ), phân cắt đường lactose
+                    thành acid lactic làm giảm pH môi trường
+                    xuống khoảng 4.5–4.7.
+
+                    Tốc độ sản sinh các chất tạo hương thơm
+                    (như acetaldehyde, diacetyl) đạt mức
+                    bão hòa thích hợp.
+
+                </li>
+
+
+                <li>
+
+                    <em>Thời gian ủ quá ngắn:</em>
+
+                    Quần thể vi khuẩn chưa đạt mật độ tế bào
+                    tối đa, chưa tích tụ đủ lượng acid lactic
+                    cần thiết.
+
+                </li>
+
+
+                <li>
+
+                    <em>Thời gian ủ quá dài:</em>
+
+                    Acid lactic tích tụ quá nhiều gây ra
+                    hiện tượng tự acid hóa (autoacidification),
+                    kết hợp với sự cạn kiệt chất dinh dưỡng
+                    làm pH giảm sâu, gây suy giảm mật độ
+                    tế bào vi khuẩn sống.
+
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <li>
+
+            <strong>
+                Đối với chất lượng sản phẩm:
+            </strong>
+
+            <ul>
+
+                <li>
+
+                    <em>Ủ chưa đủ thời gian:</em>
+
+                    pH chưa giảm đến điểm đẳng điện của casein
+                    (pH &sim; 4.6), làm sữa chưa đông tụ hoàn toàn
+                    hoặc cấu trúc gel bị lỏng lẻo, sản phẩm
+                    có độ chua thấp và hương thơm yếu.
+
+                </li>
+
+
+                <li>
+
+                    <em>Ủ quá thời gian:</em>
+
+                    Sản phẩm bị quá chua (quá acid),
+                    phá vỡ cấu trúc mịn của gel protein
+                    làm nứt khối đông, chảy nước nghiêm trọng
+                    và giảm rõ rệt giá trị cảm quan
+                    của người tiêu dùng.
+
+                </li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+
+    <hr>
+
+
+    <!-- =========================
+         TÀI LIỆU THAM KHẢO
+    ========================== -->
+
+    <div class="section-title">
+
+        Tài liệu tham khảo
+
+    </div>
+
+
+    <ol class="reference-list">
+
+        <li>
+
+            Vinderola, G., Ouwehand, A.,
+            Salminen, S., & Von Wright, A. (2024).
+
+            <em>Lactic acid bacteria</em>.
+
+            <a
+                href="https://doi.org/10.1201/9781003352075"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                https://doi.org/10.1201/9781003352075
+            </a>
+
+        </li>
+
+
+        <li>
+
+            Chen, C., Zhao, S., Hao, G.,
+            Yu, H., Tian, H., & Zhao, G. (2017).
+
+            Role of lactic acid bacteria on the yogurt flavour:
+            A review.
+
+            <em>
+                International Journal of Food Properties
+            </em>,
+
+            20(sup1), S316-S330.
+
+            <a
+                href="https://doi.org/10.1080/10942912.2017.1295988"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                https://doi.org/10.1080/10942912.2017.1295988
+            </a>
+
+        </li>
+
+
+        <li>
+
+            Widyastuti, Y.,
+            Rohmatussolihat, &
+            Febrisiantosa, A. (2014).
+
+            The role of lactic acid bacteria
+            in milk fermentation.
+
+            <em>
+                Food and Nutrition Sciences
+            </em>,
+
+            05(04), 435-442.
+
+            <a
+                href="https://doi.org/10.4236/fns.2014.54051"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                https://doi.org/10.4236/fns.2014.54051
+            </a>
+
+        </li>
+
+    </ol>
+
+
+</div>
+
+
+</body>
+
+</html>

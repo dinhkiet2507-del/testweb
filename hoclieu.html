@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Học liệu - Hồ sơ học tập">
+    <title>Học liệu | Hồ sơ học tập</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* =================================
+           HỌC LIỆU
+        ================================= */
+
+        .learning-section {
+            min-height: 100vh;
+            padding: 140px 20px 80px;
+        }
+
+        .learning-header {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 50px;
+        }
+
+        .learning-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .learning-header p {
+            color: #b8c7dc;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .learning-grid {
+            max-width: 1150px;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .learning-card {
+            position: relative;
+
+            padding: 30px;
+            min-height: 240px;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+
+            backdrop-filter: blur(15px);
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(80, 180, 255, 0.5);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.3),
+                0 0 25px rgba(50, 150, 255, 0.12);
+        }
+
+        .learning-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .learning-card h2 {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .learning-card p {
+            color: #aebdd2;
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .learning-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: fit-content;
+
+            padding: 10px 18px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            color: white;
+
+            background: rgba(70, 150, 255, 0.15);
+
+            border: 1px solid rgba(100, 180, 255, 0.3);
+
+            transition: 0.3s ease;
+        }
+
+        .learning-btn:hover {
+            background: rgba(70, 150, 255, 0.3);
+            transform: translateX(4px);
+        }
+
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .learning-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .learning-header h1 {
+                font-size: 36px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .learning-section {
+                padding-top: 120px;
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-header h1 {
+                font-size: 30px;
+            }
+
+            .learning-header p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =================================
+         PARTICLE BACKGROUND
+    ================================= -->
+
+    <canvas id="particles"></canvas>
+
+    <div class="background"></div>
+
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <span>HỒ SƠ HỌC TẬP</span>
+            </a>
+
+            <nav>
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href="index.html">
+                            Trang chủ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="exercises.html">
+                            Bài tập
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="hoclieu.html" class="active">
+                            Học liệu
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================
+         NỘI DUNG HỌC LIỆU
+    ================================= -->
+
+    <main>
+
+        <section class="learning-section">
+
+            <div class="learning-header">
+
+                <div class="badge">
+                    LEARNING RESOURCES
+                </div>
+
+                <h1>
+                    <span class="gradient-text">
+                        Học liệu
+                    </span>
+                </h1>
+
+                <p>
+                    Tổng hợp các tài liệu, giáo trình, video và
+                    nguồn học tập được sử dụng trong quá trình học tập.
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 DANH SÁCH HỌC LIỆU
+            ================================= -->
+
+            <div class="learning-grid">
+
+
+                <!-- HỌC LIỆU 01 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            📚
+                        </div>
+
+                        <h2>
+                            Tài liệu học tập
+                        </h2>
+
+                        <p>
+                            Tổng hợp các tài liệu phục vụ cho
+                            quá trình học tập và nghiên cứu.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem tài liệu →
+                    </a>
+
+                </div>
+
+
+                <!-- HỌC LIỆU 02 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            📖
+                        </div>
+
+                        <h2>
+                            Giáo trình
+                        </h2>
+
+                        <p>
+                            Các giáo trình và tài liệu tham khảo
+                            liên quan đến nội dung môn học.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem giáo trình →
+                    </a>
+
+                </div>
+
+
+                <!-- HỌC LIỆU 03 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            📄
+                        </div>
+
+                        <h2>
+                            Tài liệu PDF
+                        </h2>
+
+                        <p>
+                            Các bài đọc, tài liệu PDF và tài liệu
+                            học tập được lưu trữ trực tuyến.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem PDF →
+                    </a>
+
+                </div>
+
+
+                <!-- HỌC LIỆU 04 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            🎥
+                        </div>
+
+                        <h2>
+                            Video học tập
+                        </h2>
+
+                        <p>
+                            Các video hỗ trợ học tập và giúp
+                            minh họa trực quan cho nội dung bài học.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem video →
+                    </a>
+
+                </div>
+
+
+                <!-- HỌC LIỆU 05 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            🧪
+                        </div>
+
+                        <h2>
+                            Học liệu KHTN
+                        </h2>
+
+                        <p>
+                            Tài liệu, hình ảnh và nguồn tham khảo
+                            phục vụ học tập môn Khoa học tự nhiên.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem học liệu →
+                    </a>
+
+                </div>
+
+
+                <!-- HỌC LIỆU 06 -->
+
+                <div class="learning-card">
+
+                    <div>
+
+                        <div class="learning-icon">
+                            💻
+                        </div>
+
+                        <h2>
+                            Công nghệ thông tin
+                        </h2>
+
+                        <p>
+                            Tài liệu liên quan đến công nghệ thông tin,
+                            thiết kế website và ứng dụng CNTT trong học tập.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="learning-btn">
+                        Xem tài liệu →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+        © 2026 Trần Đình Kiệt. All Rights Reserved.
+    </footer>
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
